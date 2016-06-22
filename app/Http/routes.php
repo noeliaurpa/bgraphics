@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/', 'HomeController@index');
+
+Route::post('/question/{number?}', 'HomeController@question');
