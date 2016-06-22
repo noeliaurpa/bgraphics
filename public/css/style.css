@@ -1,3 +1,7 @@
+.logo, .logo img {
+    width: 255px;
+    margin: 5px;
+}
 .btn_question, .btn_question:active {
     transition: all 0.5s;
 	-moz-transition: all 0.5s;
@@ -17,14 +21,15 @@
     font-weight: 700;
     outline: none;
     position: relative;
-    background: #1FAAFF;
+    background: #3a3a3a;
     color: #fff;
-    box-shadow: 0 6px #3C617F;
+    box-shadow: 0 6px #222;
     padding: 25px 15px;
 }
 .btn_question:hover {
-    box-shadow: 0 4px #3C617F;
-    top: 2px;
+    box-shadow: 0 6px #000;
+    background: #2a2a2a;
+    top: 1px;
 }
 ._1 {
     -webkit-animation-delay: 0.1s;

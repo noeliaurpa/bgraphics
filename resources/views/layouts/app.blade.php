@@ -31,6 +31,10 @@
 <body id="app-layout">
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
+            <div class="row">
+
+        </div>
+        <div class="col-md-10 col-md-offset-1">
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
@@ -42,36 +46,32 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                <a class="logo" href="{{ url('/') }}">
+                    <img src="{{asset('images/logo.png')}}" alt="" />
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/') }}">Home</a></li>
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
+                        <li><a href="{{ url('/login') }}">Entrar</a></li>
+                        <li><a href="{{ url('/register') }}">Registrarse</a></li>
                     @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
+                    <li><a href="{{ url('/') }}">Inicio</a></li>
+                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
+                    <!-- {{ Auth::user()->name }} -->
                     @endif
                 </ul>
             </div>
+        </div>
+        </div>
         </div>
     </nav>
 
