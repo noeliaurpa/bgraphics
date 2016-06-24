@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Boober</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -37,36 +37,25 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="navbar-header">
 
-                <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="logo" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}" alt="" /></a>
 
-                <!-- Branding Image -->
-                <a class="logo" href="{{ url('/') }}">
-                    <img src="{{asset('images/logo.png')}}" alt="" />
-                </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-
-                </ul>
-
-                <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Entrar</a></li>
                         <li><a href="{{ url('/register') }}">Registrarse</a></li>
                     @else
                     <li><a href="{{ url('/') }}">Inicio</a></li>
+                    <li><a href="{{ url('/compare') }}">Comparar</a></li>
                     <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
-                    <!-- {{ Auth::user()->name }} -->
                     @endif
                 </ul>
             </div>

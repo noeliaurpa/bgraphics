@@ -1,5 +1,5 @@
 .logo, .logo img {
-    width: 255px;
+    width: 200px;
     margin: 5px;
 }
 .btn_question, .btn_question:active {
@@ -8,14 +8,14 @@
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 }
-.btn_question {
+.btn_question, .recalcular input[type=submit], .getItem {
     padding: 15px;
-    width: 150px;
+    width: 46%;
     float: left;
     border-radius: 2px 2px 5px 5px;
     border: none;
     cursor: pointer;
-    margin: 25px;
+    margin: 2%;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -30,6 +30,62 @@
     box-shadow: 0 6px #000;
     background: #2a2a2a;
     top: 1px;
+}
+.recalcular {
+    margin: 50px auto;
+    width: 50%;
+    text-align: center;
+}
+.recalcular .form-group {
+    width: 45%;
+    margin: 2.5%;
+    float: left;
+}
+.recalcular label {
+    width: auto;
+    float: left;
+}
+.recalcular input {
+    width: 75px;
+    text-align: center;
+    float: right;
+}
+.recalcular input[type=submit] {
+    float: none;
+    margin: 25px;
+}
+#n1, #n2, #n3 {
+    display: none;
+}
+.getItem {
+    float: none;
+    width: 250px;
+}
+.form_compare {
+    background: #f1f1f1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+}
+.cuadro_compare {
+    float: left;
+    clear: both;
+}
+.form_check {
+    padding: 5px;
+    width: 25%;
+    margin: 0 auto;
+    display: inline-block;
+}
+.compare {
+    width: 33.33%;
+    float: left;
+}
+.cuadro {
+    margin: 15px 0;
+    padding: 10px 15px;
+    background: #f1f1f1;
 }
 ._1 {
     -webkit-animation-delay: 0.1s;
