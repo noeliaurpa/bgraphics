@@ -4,73 +4,66 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
-                {{ csrf_field() }}
+            <div class="login">
+                <img id="bra" class="animated fadeInDown _10" src="{{asset('images/bra.png')}}" alt="" /><a class="logo animated fadeInDown" href="{{ url('/') }}">boober<!--img src="{{asset('images/logo.png')}}" alt="" /--></a>
+                <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    {{ csrf_field() }}
 
-                <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <label for="name" class="col-md-4 control-label">Name</label>
-
-                    <div class="col-md-6">
-                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
-
-                        @if ($errors->has('name'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('name') }}</strong>
-                        </span>
-                        @endif
+                    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                        <div class="col-md-12">
+                            <input id="name" type="text" placeholder="Nombre" class="form-control" name="name" value="{{ old('name') }}">
+                            @if ($errors->has('name'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                            @endif
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                        <div class="col-md-12">
+                            <input id="email" type="email" placeholder="Email" class="form-control" name="email" value="{{ old('email') }}">
 
-                    <div class="col-md-6">
-                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                        @if ($errors->has('email'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
-                        </span>
-                        @endif
+                            @if ($errors->has('email'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                            @endif
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                    <label for="password" class="col-md-4 control-label">Password</label>
+                    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="col-md-12">
+                            <input id="password" placeholder="Contraseña" type="password" class="form-control" name="password">
 
-                    <div class="col-md-6">
-                        <input id="password" type="password" class="form-control" name="password">
-
-                        @if ($errors->has('password'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                        @endif
+                            @if ($errors->has('password'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>
+                            @endif
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                    <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                    <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                        <div class="col-md-12">
+                            <input id="password-confirm" placeholder="Repite la contraseña" type="password" class="form-control" name="password_confirmation">
 
-                    <div class="col-md-6">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
-
-                        @if ($errors->has('password_confirmation'))
-                        <span class="help-block">
-                            <strong>{{ $errors->first('password_confirmation') }}</strong>
-                        </span>
-                        @endif
+                            @if ($errors->has('password_confirmation'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('password_confirmation') }}</strong>
+                            </span>
+                            @endif
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group">
-                    <div class="col-md-6 col-md-offset-4">
-                        <button type="submit" class="btn btn-primary">
+                    <div class="form-group btn_register">
+                        <button type="submit" class="btn btn_boober">
                             <i class="fa fa-btn fa-user"></i> Register
                         </button>
+                        <a href="/" class="register_back">Back</a>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </div>

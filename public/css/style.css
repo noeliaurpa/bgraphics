@@ -8,6 +8,12 @@
 .navbar-default {
     border: 0;
 }
+.register_back {
+    margin-right: 35px!important;
+}
+.btn_register {
+    margin-left: 0px!important;
+}
 .btn_question, .btn_question:active, .btn_boober, .btn_boober:hover {
     transition: all 0.5s;
 	-moz-transition: all 0.5s;
