@@ -1,35 +1,96 @@
-.logo, .logo img {
-    width: 200px;
-    margin: 5px;
+@font-face {
+    font-family: 'code_bold';
+    src: url('../fonts/code_bold-webfont.woff2') format('woff2'),
+         url('../fonts/code_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-.btn_question, .btn_question:active {
+.navbar-default {
+    border: 0;
+}
+.btn_question, .btn_question:active, .btn_boober, .btn_boober:hover {
     transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-o-transition: all 0.5s;
 }
+.login {
+    width: 100%;
+    padding: 30px;
+    max-width: 350px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+    background: #fff;
+}
+.login .logo {
+    width: 100%;
+    font-size: 4.8em;
+    font-family: code_bold, serif;
+    text-decoration: none;
+    color: #181818;
+    float: left;
+}
+#bra {
+    position: absolute;
+    top: 68px;
+    left: calc(50% - 88px);
+    z-index: 5;
+}
+.logo img {
+    width: 200px;
+    margin: 5px;
+}
+.login input {
+    width: auto;
+    min-width: 250px;
+    margin: 0 auto;
+}
+.login .checkbox {
+    margin-left: 20px;
+}
+.login input[type=checkbox], .login .checkbox label {
+    min-width: auto;
+    float: left;
+}
+.login button {
+    float: left;
+    margin-left: 20px;
+}
+.login form a {
+    float: right;
+    margin: 8px 20px 0 0;
+}
+.btn_boober {
+    background: #991322;
+    color: #fff;
+    /*font-family: code_bold, serif;*/
+}
+.btn_boober:hover {
+    color: #fff;
+    background: #6B0D17;
+}
 .btn_question, .recalcular input[type=submit], .getItem {
     padding: 15px;
     width: 46%;
     float: left;
-    border-radius: 2px 2px 5px 5px;
+    border-radius: 2px 2px 4px 4px;
     border: none;
     cursor: pointer;
     margin: 2%;
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
     outline: none;
-    position: relative;
     background: #3a3a3a;
     color: #fff;
     box-shadow: 0 6px #222;
     padding: 25px 15px;
+    text-transform: uppercase;
 }
 .btn_question:hover {
     box-shadow: 0 6px #000;
     background: #2a2a2a;
-    top: 1px;
+    /*padding-right: 150px;*/
 }
 .recalcular {
     margin: 50px auto;
@@ -86,6 +147,13 @@
     margin: 15px 0;
     padding: 10px 15px;
     background: #f1f1f1;
+}
+.info {
+    margin: 0px auto;
+    color: #333;
+}
+.info:hover {
+    color: #333;
 }
 ._1 {
     -webkit-animation-delay: 0.1s;

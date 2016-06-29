@@ -29,7 +29,8 @@
     </style>
 </head>
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    @if (!Auth::guest())
+    <nav class="navbar navbar-default navbar-static-top animated fadeInDown">
         <div class="container">
             <div class="row">
 
@@ -49,22 +50,22 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Entrar</a></li>
-                        <li><a href="{{ url('/register') }}">Registrarse</a></li>
-                    @else
+
                     <li><a href="{{ url('/') }}">Inicio</a></li>
+                    <li><a href="{{ url('/survey') }}">Encuesta</a></li>
                     <li><a href="{{ url('/compare') }}">Comparar</a></li>
                     <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Salir</a></li>
-                    @endif
+
                 </ul>
             </div>
         </div>
         </div>
         </div>
-    </nav>
+    </nav>@endif
+    <div class="animated fadeInUp">
+        @yield('content')
+    </div>
 
-    @yield('content')
 
     <!-- JavaScripts -->
 

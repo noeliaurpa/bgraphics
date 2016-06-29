@@ -20,10 +20,12 @@ Route::auth();
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/survey', 'QuestionController@index');
+
 Route::get('/compare', 'CompanyController@index');
 
 Route::get('/compare/compare', 'CompanyController@compare');
 
-Route::post('/question/{number?}', 'HomeController@question');
+Route::post('/question/{number?}', 'QuestionController@question');
 
-Route::post('/question/recalc/{number?}', 'HomeController@recalc');
+Route::post('/question/recalc/{number?}', 'QuestionController@recalc');

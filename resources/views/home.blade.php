@@ -4,23 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-
-            @foreach ($questions as $question)
-            <form action="{{ url('/question') }}/{{ $question->number }}" method="post">
-                {{ csrf_field() }}
-                <!-- zoomInDown zoomInUp bounceInUp fadeInUp -->
-                <input class="col-md-4 btn_question animated fadeInUp _{{ $question->number }}" type="submit" value="Pregunta {{ $question->number }}">
-            </form>
-            @endforeach
-
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-            <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            <h4 class="info">En el mundo se prostituyen entre 40 y 42 millones de personas, y de ellas el 80% son mujeres, la mayoría (75%) con edades que van de los 13 a los 25 años.</h4>
         </div>
     </div>
 </div>
 @endsection
-
-@section('scripts')
-<script src="https://code.highcharts.com/highcharts.js"></script>
-@stop
